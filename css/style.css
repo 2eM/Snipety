@@ -1,0 +1,142 @@
+/* Wyśrodkowanie wertykalne i horyzontalne jednego DIVa w drugim DIVie */
+
+#outer{
+    width:50vh ;
+    height: 70vh;
+    background-color: greenyellow ;
+    position:relative;    
+}
+
+#inner{
+    width:80% ;
+    height:60% ;
+    background-color:goldenrod ;
+    margin: auto;
+      position: absolute;
+      top: 0; left: 0; bottom: 0; right: 0;
+}
+
+/*------------------------------------------*/
+/* Okrągły przycisk z infografiką (Font Awesome) */
+
+/* #round{
+    width:100px ; 
+    height:100px ;
+    background-color: white;
+        border: 2px solid #4CAF50; 
+        border-radius: 50px;
+} */
+
+#round a{
+    display:inline-block;
+    height: 40px;
+    width: 40px ;
+    box-sizing: border-box;
+    line-height: 40px ;
+    text-align:center;
+    border: 1px solid black ;
+    background-color: white ;
+    border-radius: 50% ;
+     
+    transition: all 0.5s ;
+}
+
+
+#round a:hover{
+   border: 2px solid red ;
+}
+
+#round a:hover i{
+    color: red ;
+}
+/*Gradient horyzontalny w kolorach tęczy*/
+
+
+#gradient{
+    width:100% ;
+    height:20vh ;
+    background-image: linear-gradient(to right, red, orange, yellow, lime, blue, purple, fuchsia)
+}
+
+/*Responsywne video na 100% szerokości ekranu przeglądarki*/
+#vid {
+    width: 100%;
+    height:100vh;
+    
+}
+#vid video {
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+
+/*Ikona Font Awesome jako znacznik listy*/
+
+#fontawsome ul{
+    list-style-type: none ;
+}
+
+#fontawsome ul li{
+    font-size: 20px ;
+}
+
+#fontawsome ul li::before{
+    font-family: FontAwesome ;
+    content:'\f2c7';
+    color:red;
+    
+}
+
+/*Zmiana koloru czcionki placeholdera w formularzu*/
+
+#formularz input[placeholder="font1"] {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 25px;
+    color:red ;
+}
+
+/*
+Nadanie innego koloru dla linku, który służy do pobierania plików z
+rozszerzeniem .doc i .docx
+*/
+#snipet7 a[href$=".docx"]{
+    color:red ;
+    font-size: 20px;
+}
+
+/*
+Znacznik cytatu <q> oraz <blockquote> to znaczniki cytatów. Dla języka
+angielskiego cudzysłów w znaczniku cytatu <q> oraz <blockquote> ma mieć
+wygląd *cytowany tekst*, a dla innych języków "cytowany tekst"
+*/
+#cytaty q,
+#cytaty blockquote{
+    color:green;
+    quotes: '"' '"' ;
+}
+
+
+#cytaty blockquote::before{
+    content: open-quote ;
+}
+#cytaty blockquote::after{
+    content: close-quote ;
+}
+
+
+#cytaty q[lang="en"],
+#cytaty blockquote[lang="en"]{
+    color:red;
+    quotes: "\002a" "\002a" ;
+}
+
+
+#cytaty blockquote[lang="en"]::before{
+    content: open-quote ;
+}
+#cytaty blockquote[lang="en"]::after{
+    content: close-quote ;
+}
+
+
+
